@@ -88,9 +88,8 @@ elif st.session_state.step == 2:
         )
         response = gpt_response.choices[0].message.content
         st.session_state.summary = summary_df
-        st.markdown(f"🧠 GPT Suggestion: 
+        st.markdown(f"🧠 GPT Suggestion:\n\n{response}")
 
-{response}")
     except Exception as e:
         st.error(f"❌ GPT Error: {str(e)}")
 
